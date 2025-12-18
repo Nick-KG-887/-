@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simracing Club</title>
+    <style>
+        :root {
+            --black: #0a0a0a;
+            --purple: #9c27b0;
+            --purple-light: #e040fb;
+            --gray: #4d4d4d;
+            --text-color: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: var(--black);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--purple);
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--black);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--purple);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--purple);
+        }
+
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, var(--black), #2a0033);
+            padding: 0 2rem;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #hero button {
+            background-color: var(--purple);
+            color: var(--text-color);
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: box-shadow 0.3s, transform 0.3s;
+        }
+
+        #hero button:hover {
+            box-shadow: 0 0 20px var(--purple-light);
+            transform: scale(1.05);
+        }
+
+        #services {
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--gray);
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s;
+            border-radius: 8px;
+            border: 1px solid var(--purple);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--purple-light);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--purple-light);
+        }
+
+        #equipment {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        #equipment ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #equipment li {
+            margin: 1rem 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        #equipment li::before {
+            content: '⚙️';
+            margin-right: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        #prices {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .price-block {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .price-item {
+            background-color: var(--gray);
+            padding: 1.5rem;
+            margin: 1rem;
+            border-radius: 8px;
+            width: 200px;
+            border: 1px solid var(--purple);
+        }
+
+        .price-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--purple-light);
+        }
+
+        footer {
+            background-color: var(--black);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--purple);
+        }
+
+        footer a {
+            margin: 0 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            #services {
+                grid-template-columns: 1fr;
+            }
+
+            #equipment ul {
+                flex-direction: column;
+            }
+
+            .price-block {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Simracing Club Tokmok</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Главная</a></li>
+                <li><a href="#equipment">Оборудование</a></li>
+                <li><a href="#prices">Цены</a></li>
+                <li><a href="#footer">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h1>Почувствуй драйв настоящего автоспорта</h1>
+        <button>Забронировать заезд</button>
+    </section>
+
+    <section id="services">
+        <div class="card">
+            <h2>Профессиональные кокпиты</h2>
+            <p>Комфорт и реализм на высшем уровне.</p>
+        </div>
+        <div class="card">
+            <h2>VR-симуляторы</h2>
+            <p>Погрузись в виртуальную реальность гонок.</p>
+        </div>
+        <div class="card">
+            <h2>Обучение</h2>
+            <p>Профессиональные инструкторы для новичков и профи.</p>
+        </div>
+    </section>
+
+    <section id="equipment">
+        <h2>Наше оборудование</h2>
+        <ul>
+            <li>Базы Direct Drive</li>
+            <li>Педали с тензодатчиками</li>
+            <li>49" мониторы</li>
+        </ul>
+    </section>
+
+    <section id="prices">
+        <h2>Прайс-лист</h2>
+        <div class="price-block">
+            <div class="price-item">
+                <h3>30 мин</h3>
+                <p>800 сом</p>
+            </div>
+            <div class="price-item">
+                <h3>1 час</h3>
+                <p>1500 сом</p>
+            </div>
+            <div class="price-item">
+                <h3>Обучение</h3>
+                <p>2500 сом/час</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <p>Контакты: +996 000 000 000 | simreicng@gmail.com</p>
+        <div>
+            <a href="#">VK</a>
+            <a href="#">Instagram</a>
+            <a href="#">Telegram</a>
+        </div>
+    </footer>
+</body>
+</html>
